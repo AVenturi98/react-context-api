@@ -10,31 +10,17 @@ import GlobalContext from '../../context/context'
 
 export default function mainSection() {
 
-    const { categories } = useContext(GlobalContext)
+    const { categories, posts, fetchPosts, deletePost } = useContext(GlobalContext)
 
-    const [posts, setPosts] = useState([])
+
     const [isOpen, setIsOpen] = useState(true)
 
-    function fetchPosts() {
-        axios.get('http://localhost:3232/posts/')
-            .then((res) => {
-                console.log('posts', res)
-                setPosts(res.data)
-            })
-            .catch(err => console.error(err))
-    }
 
     useEffect(() => {
         fetchPosts()
     }, [])
 
-    function deletePost(post) {
-        axios.delete(`http://localhost:3232/posts/${post.id}`)
-            .then(() => {
-                setPosts(posts.filter(el => el !== post))
-            })
-            .catch((err) => console.error(err))
-    }
+
 
     function openMenu() {
         setIsOpen(!isOpen)

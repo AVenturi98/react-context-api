@@ -9,14 +9,36 @@ import BlankLayout from './layout/BlankLayout'
 import Lost from './layout/Lost'
 import Dettails from './pages/Dettails'
 import GlobalContext from './context/context.js'
+import axios from 'axios'
+
+
 
 
 function App() {
   const [categories] = useState(['Dolce', 'Salato'])
 
+  const [posts, setPosts] = useState([])
+
+  function fetchPosts() {
+    axios.get('http://localhost:3232/posts/')
+      .then((res) => {
+        console.log('posts', res)
+        setPosts(res.data)
+      })
+      .catch(err => console.error(err))
+  }
+
+  function deletePost(post) {
+    axios.delete(`http://localhost:3232/posts/${post.id}`)
+      .then(() => {
+        setPosts(posts.filter(el => el !== post))
+      })
+      .catch((err) => console.error(err))
+  }
+
   return (
     <>
-      <GlobalContext.Provider value={{ categories: categories }} >
+      <GlobalContext.Provider value={{ categories, posts, fetchPosts, deletePost }} >
         <BrowserRouter>
           <Routes>
             <Route element={<DefaultLayout />}>
