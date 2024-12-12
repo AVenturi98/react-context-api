@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Slab", serif;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+a.active {
+    background-color: rgb(111, 226, 121);
+    color: darkblue;
+    padding: .8rem;
+    border-radius: 10px;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.container {
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-6 {
+    width: calc(6 * 100% / 12);
+}
+
+/* TAGS  */
+
+.htmlColor {
+    background-color: darksalmon
+}
+
+.cssColor {
+    background-color: dodgerblue
+}
+
+.jsColor {
+    background-color: rgb(253, 188, 22)
+}
+
+.phpColor {
+    background-color: green;
+}
+
+.htmlColor,
+.cssColor,
+.jsColor,
+.phpColor {
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+ul {
+    gap: 10px
+}
+
+/* FORM */
+
+.col-100 {
+    width: 100%;
+    padding: 1.5rem
+}
+
+form>* {
+    margin-top: 1rem;
+}
+
+input {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 10px;
+}
+
+#add_button_form {
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: darkblue 1.5px 3px;
+}
+
+#add_button_form:hover {
+    transform: scale(0.995);
+}
+
+#add_button_form:active {
+    transform: scaleY(0.96);
+    box-shadow: darkblue 0.5px 1px;
+}
+
+.tagsItems {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* MOBILE MENU */
+
+h2 {
+    margin-bottom: 1.5rem;
+}
+
+.flexItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0 5rem 0;
+}
+
+.d-none {
+    display: none;
+}
+
+.iconFA {
+    font-size: 30px;
+    padding: .6rem .9rem;
+    border-radius: 40%;
+    border: none;
+    background-color: rgb(111, 226, 121);
+    cursor: pointer;
+}
+
+.iconMin {
+    background-color: rgba(92, 91, 91, 0.2);
+    font-size: 30px;
+    padding: .6rem .9rem;
+    border-radius: 40%;
+    border: none;
+    cursor: pointer;
+}
+
+.iconMin :hover,
+.iconFA:hover {
+    transform: scale(0.98);
+}
+
+/* TOOLTIP */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    font-size: 15px;
+    background-color: rgba(128, 128, 128, 0.2);
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-200%, -50%);
+}
+
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

@@ -1,0 +1,81 @@
+/* CARD */
+
+
+.card {
+    border: solid 0.2rem rgb(124, 124, 124);
+    border-radius: 0.5rem;
+    max-width: 600px;
+    box-shadow: black 0 20px 30px;
+}
+
+.cardImg {
+    object-position: top;
+}
+
+.image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.cardBody {
+    padding: 1rem;
+    min-height: 250px;
+}
+
+.titleCard {
+    font-weight: bold;
+    margin: 0.5rem auto;
+}
+
+.tagsCard {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.descriptionCard {
+    margin: 1rem auto;
+    line-height: 1.8rem;
+}
+
+
+.btnFlex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnDelete {
+    border: none;
+    background-color: lightgray;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.btn {
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.btnDelete:hover {
+    background-color: rgb(248, 79, 79);
+    color: white;
+}
+
+.btn:hover,
+.btnDelete:hover {
+    transform: scale(0.96);
+}
+
+.btn:active,
+.btnDelete:active {
+    background-color: rgb(111, 226, 121)
+}
